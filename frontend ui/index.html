@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedExplainer Pro — Health Insight Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__brand">
+        <h1 class="header__title">MedExplainer <span class="header__pro">Pro</span></h1>
+        <p class="header__tagline">Clinical intelligence dashboard</p>
+      </div>
+      <div class="header__actions">
+        <span class="patient-pill">Patient <strong id="patientId">—</strong></span>
+        <button type="button" id="btnRefresh" class="btn-refresh" title="Reload data">↻</button>
+      </div>
+    </header>
+
+    <p class="summary-strip" id="patientSummary"></p>
+    <section class="card">
+      <h2 class="card__title">Run analysis</h2>
+      <form id="analysisForm">
+        <textarea id="inputText" rows="6" placeholder="Paste lab report text or patient JSON here..." required></textarea>
+        <div style="margin-top:10px; display:flex; gap:10px; align-items:center;">
+          <button type="submit" id="btnSubmit" class="btn-refresh">Submit</button>
+          <span id="formStatus" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="card card--hero" id="riskCard" data-risk-level="">
+      <p class="card__eyebrow">Health risk score</p>
+      <div class="hero-score-visual">
+        <svg class="hero-ring" viewBox="0 0 120 120" focusable="false" aria-hidden="true">
+          <circle class="hero-ring__track" cx="60" cy="60" r="52" />
+          <circle class="hero-ring__progress" id="riskRingProgress" cx="60" cy="60" r="52" pathLength="100" />
+        </svg>
+        <div class="hero-score-stack">
+          <span class="hero-score__value" id="scoreNumber">—</span>
+          <span class="hero-score__suffix">/ 100</span>
+        </div>
+      </div>
+      <p class="hero-critical-label" id="riskTierLabel">—</p>
+      <div class="hero-risk-meter" role="presentation" aria-hidden="true">
+        <div class="hero-risk-meter__fill" id="riskMeterFill"></div>
+      </div>
+      <div class="hero-confidence">
+        <span>Analysis confidence</span>
+        <span id="confPct">—</span>
+      </div>
+      <div class="hero-confidence-bar" role="presentation">
+        <div class="hero-confidence-bar__fill" id="confBar"></div>
+      </div>
+    </section>
+
+    <div class="dashboard">
+      <div class="dashboard__col dashboard__col--left">
+        <section class="card">
+          <h2 class="card__title">Trend analysis</h2>
+          <div class="trend-hero" id="trendDirection">
+            <span class="trend-hero__arrow" id="trendArrow" aria-hidden="true">→</span>
+            <span class="trend-hero__label" id="trendText">—</span>
+          </div>
+          <div class="trajectory">
+            <div class="trajectory__label">Trajectory score</div>
+            <div class="trajectory__row">
+              <div class="trajectory__track">
+                <div class="trajectory__fill" id="trajectoryBar"></div>
+              </div>
+              <span class="trajectory__value" id="trajectoryValue">—</span>
+            </div>
+          </div>
+          <ul class="trend-list" id="markersList"></ul>
+        </section>
+
+        <section class="card">
+          <h2 class="card__title">Risk breakdown</h2>
+          <ul class="breakdown-list" id="breakdownList"></ul>
+        </section>
+      </div>
+
+      <div class="dashboard__col dashboard__col--right">
+        <section class="card">
+          <h2 class="card__title">Clinical insight</h2>
+          <div class="insight-box" id="clinicalInsight"></div>
+          <div class="chip-row" id="patternSignals"></div>
+        </section>
+
+        <section class="card">
+          <h2 class="card__title">Recommended actions</h2>
+          <ul class="actions-list" id="actionsList"></ul>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__disclaimer" id="disclaimer"></p>
+      <p class="footer__meta" id="footerTs"></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
