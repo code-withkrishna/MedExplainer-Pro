@@ -1,0 +1,164 @@
+[
+  {
+    "id": "synthetic-demo-001",
+    "timestamp": "2026-01-01",
+    "demographics": {
+      "age": 47,
+      "gender": "Female"
+    },
+    "source": "synthetic-demo",
+    "observations": [
+      {
+        "code": "hemoglobin",
+        "display_name": "Hemoglobin",
+        "value": 11.6,
+        "unit": "g/dL",
+        "reference_range": [
+          12.0,
+          15.5
+        ]
+      },
+      {
+        "code": "mcv",
+        "display_name": "MCV",
+        "value": 79.0,
+        "unit": "fL",
+        "reference_range": [
+          80.0,
+          96.0
+        ]
+      },
+      {
+        "code": "glucose",
+        "display_name": "Glucose",
+        "value": 132.0,
+        "unit": "mg/dL",
+        "reference_range": [
+          70.0,
+          99.0
+        ]
+      },
+      {
+        "code": "hba1c",
+        "display_name": "HbA1c",
+        "value": 6.3,
+        "unit": "%",
+        "reference_range": [
+          4.0,
+          5.6
+        ]
+      },
+      {
+        "code": "ldl",
+        "display_name": "LDL Cholesterol",
+        "value": 141.0,
+        "unit": "mg/dL",
+        "reference_range": [
+          0.0,
+          100.0
+        ]
+      },
+      {
+        "code": "creatinine",
+        "display_name": "Creatinine",
+        "value": 1.1,
+        "unit": "mg/dL",
+        "reference_range": [
+          0.6,
+          1.2
+        ]
+      },
+      {
+        "code": "egfr",
+        "display_name": "eGFR",
+        "value": 72.0,
+        "unit": "mL/min/1.73m2",
+        "reference_range": [
+          90.0,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": "synthetic-demo-001",
+    "timestamp": "2026-04-01",
+    "demographics": {
+      "age": 47,
+      "gender": "Female"
+    },
+    "source": "synthetic-demo",
+    "observations": [
+      {
+        "code": "hemoglobin",
+        "display_name": "Hemoglobin",
+        "value": 10.2,
+        "unit": "g/dL",
+        "reference_range": [
+          12.0,
+          15.5
+        ]
+      },
+      {
+        "code": "mcv",
+        "display_name": "MCV",
+        "value": 75.0,
+        "unit": "fL",
+        "reference_range": [
+          80.0,
+          96.0
+        ]
+      },
+      {
+        "code": "glucose",
+        "display_name": "Glucose",
+        "value": 168.0,
+        "unit": "mg/dL",
+        "reference_range": [
+          70.0,
+          99.0
+        ]
+      },
+      {
+        "code": "hba1c",
+        "display_name": "HbA1c",
+        "value": 7.1,
+        "unit": "%",
+        "reference_range": [
+          4.0,
+          5.6
+        ]
+      },
+      {
+        "code": "ldl",
+        "display_name": "LDL Cholesterol",
+        "value": 162.0,
+        "unit": "mg/dL",
+        "reference_range": [
+          0.0,
+          100.0
+        ]
+      },
+      {
+        "code": "creatinine",
+        "display_name": "Creatinine",
+        "value": 1.4,
+        "unit": "mg/dL",
+        "reference_range": [
+          0.6,
+          1.2
+        ]
+      },
+      {
+        "code": "egfr",
+        "display_name": "eGFR",
+        "value": 58.0,
+        "unit": "mL/min/1.73m2",
+        "reference_range": [
+          90.0,
+          null
+        ]
+      }
+    ]
+  }
+]
